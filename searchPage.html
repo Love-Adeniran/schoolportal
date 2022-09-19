@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Page</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+        }
+    
+        section{
+            background-image: linear-gradient(white,green);
+            height: 100vh;
+        }
+        div{
+            text-align: center;
+            margin: 15% 40%;
+            padding: 5px;
+            width: 30vw;
+            height: 20vh;
+            background-color: #008000;
+            box-sizing: border-box;
+            border-radius: 20px 0;
+            box-shadow: 5px 10px 18px;
+        }
+        
+         .searchbox input{
+            margin: 20px;
+            padding: 10px;
+            border: 2px dotted #008000;
+            border-radius: 40px;
+        } 
+        .searchbox input:focus{
+            outline: 4px dashed #008000;
+        }
+        button{
+            background-color:#fff;
+            border-radius: 45px;
+            border: none;
+            padding: 10px;
+            color: #008000;
+            margin: 5px;
+        }
+        p{
+            margin: 22px;
+        }
+         table{
+            position: absolute;
+            left: 38%;
+            top: 62%;
+            background-color: #fff;
+        }
+        table td{
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        
+        <div class="searchbox">
+            <button onclick="logOut()">Log out</button>
+            <input type="number" placeholder="search" id="searchindex">
+            <button onclick="search()"> Search</button>
+            <p><a href="displayPage.html">Click here</a> to return to the display Page</p>
+        </div>
+        <!-- student's display details -->
+        <table border="1">
+            <thead>
+                <td>Matric Number</td>
+                <td>First Name</td>
+                <td>Last Name</td>
+                <td>Email</td>
+                <td>Date and Time</td>
+            </thead>
+            <tbody id="disp"></tbody>
+        </table>
+    </section>
+    
+    <script src="searchPage.js"></script>
+</body>
+</html>
